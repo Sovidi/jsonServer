@@ -15,13 +15,13 @@ app.get('/abc', function (req, res) {
     res.send( JSON.parse(jsonData));
 });
 
-app.get('/abc/:id', function (req, res) {
-    const jsonData = fs.readFileSync("./test.json");
-    const data = JSON.parse(jsonData);
-    const {id} = req.params;
-    const aaa = data.filter(item => item.id == id)
-    res.send(aaa);
-});
+// app.get('/abc/:id', function (req, res) {
+//     const jsonData = fs.readFileSync("./test.json");
+//     const data = JSON.parse(jsonData);
+//     const {id} = req.params;
+//     const aaa = data.filter(item => item.id == id)
+//     res.send(aaa);
+// });
 
 app.post('/insert', function (req, res) {
     console.log(req.body)
